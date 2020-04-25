@@ -1,4 +1,4 @@
-# README
+# Hadoop JSON Merge
 
 ## Info
 
