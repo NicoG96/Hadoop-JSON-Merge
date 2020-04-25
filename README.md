@@ -4,7 +4,8 @@
 * All deliverables are found in /out/
 * Further documentation on project structure found in /docs/
 
-## Problem
+## Overview
+### Problem
 
 * We have a web crawler that pulls .json data from articles on a periodic basis 
   - Files are composed of comments
@@ -17,7 +18,7 @@
 
 * We want one file per article: it should contain every discrete comment from all files and contain no duplicates
 
-## Solution
+### Solution
 
 * MapReduce program using a distributed 4-node Hadoop cluster
   - A large dataset necesitates a more efficient algorithm to process these files in lieu of sequential processing
@@ -32,7 +33,9 @@
 
 * This application processes a set of files for one article ID and will append all unique identifying comment IDs into one structured json file
 
-## Process
+## Application
+
+### Workflow
 
 1. A sample set is defined and passed as an argument to the application
 
@@ -56,7 +59,7 @@
 
 8. The dictionary is iterated over, and prints the unique comments into a structured JSON array, where it is then saved as a file in HDFS as a part-00000 file
 
-## Example
+### Example
 Listing the files in HDFS to be processed:
 
 ![ls](https://i.imgur.com/lwlt7eU.png)
@@ -69,4 +72,26 @@ An example of the output during the job:
 
 ![progress](https://i.imgur.com/G43tnL2.png)
 
-A list of the HDFS output files:
+Hadoop output from a successful run:
+
+![success](https://i.imgur.com/7zyVZ6o.png)
+
+A list of all the output files Hadoop wrote to:
+
+
+
+Getting those files from HDFS using the following command:
+
+![get](https://i.imgur.com/565FLoG.png)
+
+Running shell commands on file to peek at its contents:
+
+![cat](https://i.imgur.com/SRZJEoC.png)
+
+Validating that the file is properly structured JSON:
+
+![valid](https://i.imgur.com/TXyBH92.png)
+
+
+### Issues / Limitations
+
