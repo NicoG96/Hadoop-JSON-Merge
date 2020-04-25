@@ -1,21 +1,21 @@
 # Project directory structure
 
-/docs/
+## /docs/
 
 - This file
 
-/out/
+## /out/
 
 - Houses all the deliverables for this project, created by the Hadoop application
 
-/sample/
+## /sample/
 
 - The .json files provided by the professor
 
-/scripts/
+## /scripts/
 
-- Miscellaneous scripts I made for streamlining development
+- Miscellaneous scripts for streamlining development
 	
-/src/
+## /src/
 
-- Python files driving the mapping and reducing functions
+- Python source code driving the mapping and reducing functions
