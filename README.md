@@ -58,12 +58,15 @@
 
 ## Example
 Listing the files in HDFS to be processed:
+
 ![ls](https://i.imgur.com/lwlt7eU.png)
 
 Running the Hadoop Streaming API with arguments configured likeso:
+
 ![cmd](https://i.imgur.com/OYGI31L.png)
 
 An example of the output during the job:
+
 ![progress](https://i.imgur.com/G43tnL2.png)
 
 A list of the HDFS output files:
