@@ -76,9 +76,9 @@ Hadoop output from a successful run:
 
 ![success](https://i.imgur.com/7zyVZ6o.png)
 
-A list of all the output files Hadoop wrote to:
+An example of the HDFS output directory after invoking the program:
 
-
+![ls2](https://i.imgur.com/4qlANL0.png)
 
 Getting those files from HDFS using the following command:
 
