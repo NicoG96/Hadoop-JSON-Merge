@@ -145,13 +145,13 @@ Validating that the file is properly structured JSON:
 <!-- MEMORY -->
 ### Memory
 
-The most glaring issue with this project was the memory limitations: EC2 instances were only running on 1GB of RAM, and from the cursory reading I've done, that's regarded as a near-inadequate amount for a Hadoop processor.  The overhead of running a Hadoop cluster eats up a lot of processing power by its own merit and compounding it with a large dataset presented even more problems:
+The most glaring issue with this project was the memory limitations: EC2 instances were only running on 1GB of RAM. The overhead of running a Hadoop cluster eats up a lot of processing power by its own merit and compounding it with a large dataset presented even more problems:
 
 This program generally only operates smoothly with a small dataset. Sets that approach more than 4 files do not run to completion practically every time. The program is completely operational and produces the expected output when working with small datasets, but when given a large dataset to parse, it functionally breaks down to the point that the entire cluster is frozen and needs to be rebooted via the EC2 dashboard.
 
-The fact that the larger the dataset, the higher the rate of the program locking up lends credence to the suggestion that this is a memory issue. Moreover, runs that were not able to complete would occasionally run successfully after a reboot of the EC2 instance -- further suggesting that the memory for these instances are reaching capacity. Put bluntly, this was a limitation I could not reconcile given the architecture I had to work with.
+The fact that the larger the dataset, the higher the rate of the program locking up lends credence to the suggestion that this is a memory issue. Moreover, runs that were not able to complete would occasionally run successfully after a reboot of the EC2 instance -- further suggesting that the memory for these instances are reaching capacity. Put bluntly, this was a limitation I could not reconcile given the architecture I had to work with. I invested a lot of time into trying to solve this problem but found no concrete solution; I instead chose to work around this problem in order to meet the delivery deadline.
 
-As a workaround, I resolved to manually separate these files into their own folders - grouped by article ID.  This way, the dataset is artificially restricted to its absolute minimum. Athough the initialization and extraction of the data is a bit more tedious, the output is fundamentally the same. After hours of troubleshooting and manually attempting to configure the memory limits in Hadoop configuration files, I found this was the only rational solution to my memory problems.
+To maintain velocity on devlopment, I resolved to manually separate these files into their own folders - grouped by article ID.  This way, the dataset is artificially restricted to its absolute minimum. Athough the initialization and extraction of the data is a bit more tedious, the output is fundamentally the same. After hours of troubleshooting and manually attempting to configure the memory limits in Hadoop configuration files, I found this was the only rational solution to my memory problems.
 
 <!-- HADOOP -->
 ### Hadoop Streaming API
