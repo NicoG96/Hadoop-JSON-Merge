@@ -151,7 +151,7 @@ This program generally only operates smoothly with a small dataset. Sets that ap
 
 The fact that the larger the dataset, the higher the rate of the program locking up lends credence to the suggestion that this is a memory issue. Moreover, runs that were not able to complete would occasionally run successfully after a reboot of the EC2 instance -- further suggesting that the memory for these instances are reaching capacity. Put bluntly, this was a limitation I could not reconcile given the architecture I had to work with. I invested a lot of time into trying to solve this problem but found no concrete solution; I instead chose to work around this problem in order to meet the delivery deadline.
 
-To maintain velocity on devlopment, I resolved to manually separate these files into their own folders - grouped by article ID.  This way, the dataset is artificially restricted to its absolute minimum. Athough the initialization and extraction of the data is a bit more tedious, the output is fundamentally the same. After hours of troubleshooting and manually attempting to configure the memory limits in Hadoop configuration files, I found this was the only rational solution to my memory problems.
+To maintain velocity on development, I resolved to manually separate these files into their own folders - grouped by article ID.  This way, the dataset is artificially restricted to its absolute minimum. Athough the initialization and extraction of the data is a bit more tedious, the output is fundamentally the same. After hours of troubleshooting and manually attempting to configure the memory limits in Hadoop configuration files, I found this was the only rational solution to my memory problems.
 
 <!-- HADOOP -->
 ### Hadoop Streaming API
