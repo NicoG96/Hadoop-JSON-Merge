@@ -41,7 +41,7 @@
 
 * We have multiple files that match article ID but vary in their timestamps
 
-* We want one file per article: it should contain every discrete comment from all files and contain no duplicates
+* We want one file per article: it should contain every discrete comment from all files, contain no duplicates, and should be the most recent version of that comment.
 
 <!-- SOLUTION -->
 ### Solution
