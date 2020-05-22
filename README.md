@@ -3,7 +3,7 @@
   <h1 align="center">Hadoop JSON Merge</h1>
 
   <p align="center">
-    A tool to deduplicate JSON files' contents using Hadoop
+    A tool to deduplicate JSON file contents using Hadoop
   </p>
 
 <!-- TABLE OF CONTENTS -->
